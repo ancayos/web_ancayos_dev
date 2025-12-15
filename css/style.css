@@ -1,0 +1,99 @@
+/* Definición de la Fuente y Color de Fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Color de fondo general claro */
+    color: #343a40; /* Color de texto oscuro general */
+}
+
+/* Color de acento: se utiliza un azul/cyan (típico en desarrollo) */
+:root {
+    --accent-color: #00bcd4; /* Cyan */
+}
+
+.accent-text {
+    color: var(--accent-color) !important;
+}
+
+.btn-primary, .bg-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+.btn-outline-primary {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+}
+
+.section-title {
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+#experiencia .section-title::after, 
+#habilidades .section-title::after {
+    margin-left: 0;
+}
+
+
+/* Estilos para el Header (Pantalla completa) */
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080?grayscale') no-repeat center center/cover;
+    height: 100vh;
+}
+
+
+/* Estilos de la Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo semitransparente oscuro */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para la línea de tiempo (Experiencia/Formación) */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: #dee2e6; /* Línea gris */
+}
+.timeline-item {
+    padding-bottom: 20px;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color); /* Círculo de acento */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 1;
+}
+
+/* Habilidades: Mejorar la visualización de la lista */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+}
